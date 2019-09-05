@@ -3,11 +3,8 @@ package com.company;
         import java.util.List;
         import java.util.Scanner;
 
-
-
 class Printclass1 extends Thread
 {
-
     public int n,i;
     public   int[] arr = new int[100];
 
@@ -17,8 +14,6 @@ class Printclass1 extends Thread
         this.n=n;
         this.i=i;
     }
-
-
     @Override
     public void run()
     {
@@ -27,7 +22,6 @@ class Printclass1 extends Thread
 
     static void Combination(int arr[], int n, int i)
     {
-
         List<Integer> coins = new ArrayList<Integer>();
         coins.add(1);
         coins.add(2);
@@ -49,25 +43,18 @@ class Printclass1 extends Thread
             }
         }
     }
-
-
-    public static void Printingfunction(int arr[], int m)           //function to print combinations
-    {int i;
+   public static void Printingfunction(int arr[], int m)           //function to print combinations
+    {
+        int i;
         for (i = 0; i < m; i++)
-
-            System.out.print(+ arr[i] + "   ");
+        System.out.print(+ arr[i] + "   ");
         System.out.println("{Thread 1}");
-
         try {
-            Thread.sleep(500);
+            Thread.sleep(450);
         } catch (Exception e) { }
-
     }
-
 }
-
 class Printclass2 extends Thread {
-
     public int[] array = new int[100];
     public  int d,i;
 
@@ -82,8 +69,7 @@ class Printclass2 extends Thread {
     {
         SecondCombination(array, d, 0);
     }
-
-    static void SecondCombination( int arr[], int n, int i)
+       static void SecondCombination( int arr[], int n, int i)
     {
         List<Integer> coins = new ArrayList<Integer>();
         coins.add(1);
@@ -99,8 +85,7 @@ class Printclass2 extends Thread {
                     arr[i] = k;
                     SecondCombination(arr, n - k, i + 1);
                 }
-
-            }
+          }
         }
     }
     //function to print combinations
@@ -121,7 +106,8 @@ class Printclass2 extends Thread {
 
 class Main
 {
-    public static void main (String[] args) {
+    public static void main (String[] args)
+    {
         int num = 0, d = 0;
         if (args[0].contains("test")) {
 
@@ -130,10 +116,7 @@ class Main
        System.out.println();
             d = 3;
             System.out.println("Number to test for second Thread: "+ d);
-
-
-
-        }
+    }
 
         int[] arr = new int[num];
         int[] array = new int[d];
@@ -143,8 +126,5 @@ class Main
 
         Printclass2 print2 = new Printclass2(array, d, 0);//calling Second thread(class)
         print2.start();
-
-
-    }
-
-    }
+}
+}
