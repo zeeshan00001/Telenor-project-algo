@@ -147,12 +147,4 @@ class Main
 
     }
 
-//        System.out.println("Number to test for second Thread");
-//        Scanner number = new Scanner(System.in);
-//        int d = number.nextInt();
-//        int[] array = new int[d];
-//        Printclass2 print2 = new Printclass2(array,d,0);//calling Second thread(class)
-//        print2.start();
-
-
     }
